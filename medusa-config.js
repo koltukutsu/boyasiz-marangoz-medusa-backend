@@ -30,20 +30,20 @@ const STORE_CORS = process.env.STORE_CORS || "http://localhost:8000";
 
 //// CONFIGURATION FOR DEPLOYING TO DIGITAL OCEAN
 
-const DB_USERNAME = process.env.DB_USERNAME
-const DB_PASSWORD = process.env.DB_PASSWORD
-const DB_HOST = process.env.DB_HOST
-const DB_PORT = process.env.DB_PORT
-const DB_DATABASE = process.env.DB_DATABASE
-
-const DATABASE_URL =
-    `postgres://${DB_USERNAME}:${DB_PASSWORD}` +
-    `@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`
+// const DB_USERNAME = process.env.DB_USERNAME
+// const DB_PASSWORD = process.env.DB_PASSWORD
+// const DB_HOST = process.env.DB_HOST
+// const DB_PORT = process.env.DB_PORT
+// const DB_DATABASE = process.env.DB_DATABASE
+//
+// const DATABASE_URL =
+//     `postgres://${DB_USERNAME}:${DB_PASSWORD}` +
+//     `@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`
 
 //// CONFIGURATION FOR DEPLOYING TO DIGITAL OCEAN
 
-// const DATABASE_URL =
-//   process.env.DATABASE_URL || "postgres://localhost/medusa-starter-default";
+const DATABASE_URL =
+  process.env.DATABASE_URL || "postgres://localhost/medusa-starter-default";
 
 const REDIS_URL = process.env.REDIS_URL || "redis://localhost:6379";
 
@@ -92,8 +92,8 @@ const projectConfig = {
   admin_cors: ADMIN_CORS,
 
   //// DATABASE CONFIGURATION FOR DEPLOYING TO DIGITAL OCEAN
-  database_extra: { ssl: { rejectUnauthorized: false } },
-  redis_url: process.env.REDIS_URL,
+  // database_extra: { ssl: { rejectUnauthorized: false } }
+  // redis_url: process.env.REDIS_URL,
   //// DATABASE CONFIGURATION FOR DEPLOYING TO DIGITAL OCEAN
 
 
